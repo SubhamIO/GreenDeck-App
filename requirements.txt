@@ -1,6 +1,6 @@
 gdown
 flask_cors
-Flask==1.1.1
+flask
 pandas
 numpy
 Click==7.0
