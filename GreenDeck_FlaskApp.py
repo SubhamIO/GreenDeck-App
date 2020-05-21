@@ -325,14 +325,14 @@ def competition_discount_diff_list(dataset):
         return jsonify({query_type: [""]})
 
 
-# '''Display Welcome message to the user when the user visit the page'''
-# @app.route('/')
-# def welcome():
+'''Display Welcome message to the user when the user visit the page'''
+@app.route('/')
+def welcome():
 
-#     return '<h1>This is Subham Sarkar</h1> <br><h3>Greendeck Assignment</h3>'
+    return '<h1>This is Subham Sarkar</h1> <br><h3>Greendeck Assignment</h3>'
 
 
-@app.route('/', methods=["POST"])
+@app.route('/filter', methods=["POST"])
 def request_from_client():
 #     dataset = request.get_json()
     dataset = { "query_type": "expensive_list", "filters": [{ "operand1": "brand.name", "operator": "==", "operand2": "prada" }] }
