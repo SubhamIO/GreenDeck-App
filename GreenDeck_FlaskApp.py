@@ -334,8 +334,8 @@ def competition_discount_diff_list(dataset):
 
 @app.route('/', methods=["POST"])
 def request_from_client():
-    dataset = request.get_json()
-
+#     dataset = request.get_json()
+    dataset = { "query_type": "expensive_list", "filters": [{ "operand1": "brand.name", "operator": "==", "operand2": "prada" }] }
     # Performing actions based on query type
     if dataset['query_type'] == 'discounted_products_list':
         return discounted_products_list(dataset)
